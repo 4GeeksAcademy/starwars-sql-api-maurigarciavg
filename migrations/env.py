@@ -44,7 +44,6 @@ target_db = current_app.extensions['migrate'].db
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
 
-
 def get_metadata():
     if hasattr(target_db, 'metadatas'):
         return target_db.metadatas[None]

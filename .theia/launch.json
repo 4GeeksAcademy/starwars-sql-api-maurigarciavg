@@ -1,6 +1,7 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
+    // 📝 Este archivo configura el lanzamiento del servidor Flask.
+    // ✅ Buen uso de la estructura JSON para configuraciones.
+    // 💡 Asegúrate de que el archivo app.py esté en la ruta correcta.
     "version": "0.2.0",
     "configurations": [
         {
@@ -9,6 +10,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/src/app.py",
             "console": "internalConsole"
+            // 💡 Considera cambiar 'internalConsole' a 'integratedTerminal' para ver la salida en la terminal.
         }
     ]
 }

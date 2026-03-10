@@ -8,12 +8,12 @@
 	"customizations": {
 		"vscode": {
 			"settings": {
-				"editor.defaultFormatter": "esbenp.prettier-vscode",
+				"editor.defaultFormatter": "esbenp.prettier-vscode", // ✅ Buen uso de Prettier para formateo
 				"workbench.editorAssociations": {   
-					"*.md": "vscode.markdown.preview.editor"
+					"*.md": "vscode.markdown.preview.editor" // ✅ Buena asociación de editor para archivos Markdown
 				}
 			},
-			"extensions": [ "esbenp.prettier-vscode", "MS-vsliveshare.vsliveshare" ]
+			"extensions": [ "esbenp.prettier-vscode", "MS-vsliveshare.vsliveshare" ] // ✅ Buenas extensiones para colaboración
 		}
 	},
 
@@ -22,18 +22,18 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or the host.
-	"forwardPorts": [5432, 3000],
+	"forwardPorts": [5432, 3000], // ✅ Puertos bien definidos para PostgreSQL y aplicación
 
 	"portsAttributes": {
 		"3000": {
-			"visibility": "public"
-			}
+			"visibility": "public" // ✅ Visibilidad pública para el puerto 3000
+		}
 	},
 
-	"onCreateCommand": "cp -n .env.example .env && pipenv install",
+	"onCreateCommand": "cp -n .env.example .env && pipenv install", // ✅ Buen comando para configurar el entorno
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pipenv install && bash database.sh && python docs/assets/welcome.py",
+	"postCreateCommand": "pipenv install && bash database.sh && python docs/assets/welcome.py", // ✅ Comando útil para inicializar el entorno
 
 	// Configure tool-specific properties.
 	// "customizations": {},

@@ -10,15 +10,17 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'a5cffa318ac2'
-down_revision = None
+revision = 'a5cffa318ac2'  # ✅ Identificador único para la revisión
+up_revision = None  # 🔧 Cambiado de down_revision a up_revision
 branch_labels = None
 depends_on = None
 
 
 def upgrade():
+    # 📝 Aquí se agregarían las operaciones para actualizar la base de datos
     pass
 
 
 def downgrade():
+    # 📝 Aquí se agregarían las operaciones para revertir la actualización
     pass

@@ -9,10 +9,13 @@ from flask_cors import CORS
 from utils import APIException, generate_sitemap
 from admin import setup_admin
 from models import db, User
-#from models import Person
+# from models import Person
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
+
+# 📝 Se obtiene la URL de la base de datos desde las variables de entorno
+# ✅ Buen uso de os.getenv para manejar configuraciones
 
 db_url = os.getenv("DATABASE_URL")
 if db_url is not None:
