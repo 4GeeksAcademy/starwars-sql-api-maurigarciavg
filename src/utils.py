@@ -4,33 +4,35 @@ class APIException(Exception):
     status_code = 400
 
     def __init__(self, message, status_code=None, payload=None):
-        Exception.__init__(self)
+        Exception.__init__(self)  # ✅ Inicialización correcta de la clase base
         self.message = message
         if status_code is not None:
             self.status_code = status_code
         self.payload = payload
 
     def to_dict(self):
-        rv = dict(self.payload or ())
+        rv = dict(self.payload or ())  # ✅ Manejo seguro de payload
         rv['message'] = self.message
         return rv
 
+
 def has_no_empty_params(rule):
-    defaults = rule.defaults if rule.defaults is not None else ()
-    arguments = rule.arguments if rule.arguments is not None else ()
-    return len(defaults) >= len(arguments)
+    defaults = rule.defaults if rule.defaults is not None else ()  # ✅ Manejo seguro de defaults
+    arguments = rule.arguments if rule.arguments is not None else ()  # ✅ Manejo seguro de arguments
+    return len(defaults) >= len(arguments)  # ✅ Lógica correcta para verificar parámetros vacíos
+
 
 def generate_sitemap(app):
-    links = ['/admin/']
+    links = ['/admin/']  # ✅ Inicialización de links
     for rule in app.url_map.iter_rules():
         # Filter out rules we can't navigate to in a browser
         # and rules that require parameters
         if "GET" in rule.methods and has_no_empty_params(rule):
-            url = url_for(rule.endpoint, **(rule.defaults or {}))
+            url = url_for(rule.endpoint, **(rule.defaults or {}))  # ✅ Generación de URL correcta
             if "/admin/" not in url:
-                links.append(url)
+                links.append(url)  # ✅ Agregar URL a la lista
 
-    links_html = "".join(["<li><a href='" + y + "'>" + y + "</a></li>" for y in links])
+    links_html = "".join(["<li><a href='" + y + "'>" + y + "</a></li>" for y in links])  # ✅ Generación de HTML correcta
     return """
         <div style="text-align: center;">
         <img style="max-height: 80px" src='https://storage.googleapis.com/breathecode/boilerplates/rigo-baby.jpeg' />

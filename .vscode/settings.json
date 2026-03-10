@@ -1,8 +1,8 @@
 {
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true, // ✅ Buena práctica para mantener el código limpio
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // ✅ Buen uso de un formateador
   "workbench.editorAssociations": {
-    "*.md": "vscode.markdown.preview.editor"
+    "*.md": "vscode.markdown.preview.editor" // ✅ Buena asociación para archivos markdown
   },
-  "python-envs.defaultEnvManager": "ms-python.python:pipenv"
+  "python-envs.defaultEnvManager": "ms-python.python:pipenv" // ✅ Buen enfoque para manejar entornos de Python
 }

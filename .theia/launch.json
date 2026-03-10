@@ -1,6 +1,6 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
+    // 📝 Este archivo configura el entorno de lanzamiento para tu aplicación Flask.
+    // ✅ Buena elección de usar configuraciones para facilitar el desarrollo.
     "version": "0.2.0",
     "configurations": [
         {
@@ -9,6 +9,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/src/app.py",
             "console": "internalConsole"
+            // 💡 Asegúrate de que la ruta a tu archivo app.py sea correcta.
         }
     ]
 }

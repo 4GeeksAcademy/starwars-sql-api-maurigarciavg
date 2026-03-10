@@ -17,8 +17,12 @@ depends_on = None
 
 
 def upgrade():
+    // 🔧 Aquí falta la implementación de la migración de actualización
+    // 📝 Asegúrate de definir qué cambios se deben aplicar a la base de datos
     pass
 
 
 def downgrade():
+    // 🔧 Aquí falta la implementación de la migración de reversión
+    // 📝 Es importante definir cómo revertir los cambios realizados en 'upgrade'
     pass

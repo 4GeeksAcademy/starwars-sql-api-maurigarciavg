@@ -13,7 +13,7 @@
 					"*.md": "vscode.markdown.preview.editor"
 				}
 			},
-			"extensions": [ "esbenp.prettier-vscode", "MS-vsliveshare.vsliveshare" ]
+			"extensions": [ "esbenp.prettier-vscode", "MS-vsliveshare.vsliveshare" ] // ✅ Buen uso de extensiones para mejorar la experiencia de desarrollo
 		}
 	},
 
@@ -26,14 +26,14 @@
 
 	"portsAttributes": {
 		"3000": {
-			"visibility": "public"
-			}
+			"visibility": "public" // ✅ Correcto, hace el puerto accesible
+		}
 	},
 
-	"onCreateCommand": "cp -n .env.example .env && pipenv install",
+	"onCreateCommand": "cp -n .env.example .env && pipenv install", // ✅ Buen uso de comandos para la configuración inicial
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "pipenv install && bash database.sh && python docs/assets/welcome.py",
+	"postCreateCommand": "pipenv install && bash database.sh && python docs/assets/welcome.py", // ✅ Buena práctica para ejecutar scripts post creación
 
 	// Configure tool-specific properties.
 	// "customizations": {},
