@@ -1,8 +1,12 @@
 {
+  // ✅ Buen uso de configuraciones para el editor
   "editor.formatOnSave": true,
+  // ✅ Establecer un formateador por defecto es una buena práctica
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // ✅ Asociar archivos Markdown a la vista previa es útil para el desarrollo
   "workbench.editorAssociations": {
     "*.md": "vscode.markdown.preview.editor"
   },
+  // 💡 Considera usar un entorno virtual para evitar conflictos de dependencias
   "python-envs.defaultEnvManager": "ms-python.python:pipenv"
 }

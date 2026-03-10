@@ -27,7 +27,7 @@
 	"portsAttributes": {
 		"3000": {
 			"visibility": "public"
-			}
+		}
 	},
 
 	"onCreateCommand": "cp -n .env.example .env && pipenv install",

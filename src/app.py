@@ -9,11 +9,13 @@ from flask_cors import CORS
 from utils import APIException, generate_sitemap
 from admin import setup_admin
 from models import db, User
-#from models import Person
+# from models import Person
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
+# Cargar la URL de la base de datos desde las variables de entorno
+// 📝 Esto es importante para que tu aplicación pueda conectarse a la base de datos correctamente.
 db_url = os.getenv("DATABASE_URL")
 if db_url is not None:
     app.config['SQLALCHEMY_DATABASE_URI'] = db_url.replace("postgres://", "postgresql://")
@@ -26,12 +28,12 @@ db.init_app(app)
 CORS(app)
 setup_admin(app)
 
-# Handle/serialize errors like a JSON object
+# Manejar/serializar errores como un objeto JSON
 @app.errorhandler(APIException)
 def handle_invalid_usage(error):
     return jsonify(error.to_dict()), error.status_code
 
-# generate sitemap with all your endpoints
+# Generar un sitemap con todos tus endpoints
 @app.route('/')
 def sitemap():
     return generate_sitemap(app)
@@ -45,7 +47,7 @@ def handle_hello():
 
     return jsonify(response_body), 200
 
-# this only runs if `$ python src/app.py` is executed
+# Esto solo se ejecuta si se ejecuta `$ python src/app.py`
 if __name__ == '__main__':
     PORT = int(os.environ.get('PORT', 3000))
     app.run(host='0.0.0.0', port=PORT, debug=False)

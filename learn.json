@@ -12,4 +12,6 @@
   "projectType": "template",
   "difficulty": "beginner",
   "technologies": ["flask", "python", "api"]
+  // ✅ Buen uso de JSON para estructurar datos del proyecto
+  // 💡 Considera incluir más detalles sobre el propósito del proyecto
 }
